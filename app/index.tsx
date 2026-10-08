@@ -1,17 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { HomePage } from "../components/HomePage";
 
 export default function Index() {
-  return (
-    <View style={styles.container}>
-      <Text>Test</Text>
-    </View>
-  );
+  return <HomePage />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+// });

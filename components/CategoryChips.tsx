@@ -4,7 +4,7 @@ export function CategoryChips() {
   return (
     <FlatList
       data={categories}
-      keyExtractor={(category) => category.id.toString()}
+      keyExtractor={(item) => item.id.toString()}
       horizontal
       style={styles.row}
       renderItem={({ item }) => <Text style={styles.chip}>{item.label}</Text>}
