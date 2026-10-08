@@ -14,6 +14,7 @@ export function CategoryChips() {
 const styles = StyleSheet.create({
   row: {
     marginHorizontal: 10,
+    padding: 5,
   },
   backgroundColor: {
     backgroundColor: "#ffffff",
