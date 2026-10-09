@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   chip: {
     backgroundColor: "#f2f2f2",
-    borderRadius: 5,
+    borderRadius: 10,
     fontSize: 15,
     padding: 6,
     marginRight: 10,

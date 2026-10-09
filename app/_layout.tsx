@@ -16,7 +16,7 @@ export default function RootLayout() {
       >
         <Stack.Screen name="index" />
         <Stack.Screen name="subscriptions" />
-        <Stack.Screen name="videoPlayer" options={{ headerShown: false }} />
+        <Stack.Screen name="video/[id]" options={{ headerShown: false }} />
       </Stack>
       <Navbar />
     </View>

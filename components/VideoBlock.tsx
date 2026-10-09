@@ -1,5 +1,13 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import {
+  FlatList,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { Video } from "../assets/data/videos";
 
 type VideoBlockProps = {
@@ -12,23 +20,25 @@ export function VideoBlock({ videos }: VideoBlockProps) {
       data={videos}
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => (
-        <View>
-          <Image source={item.thumbnail} style={styles.thumbnail} />
-          <View style={styles.videoDetails}>
-            <View>
-              <Image source={item.channelIcon} style={styles.channelIcon} />
+        <Link href={`/video/${item.id}`} asChild>
+          <Pressable>
+            <Image source={item.thumbnail} style={styles.thumbnail} />
+            <View style={styles.videoDetails}>
+              <View>
+                <Image source={item.channelIcon} style={styles.channelIcon} />
+              </View>
+              <View style={[styles.verticalCenter, { flex: 2 }]}>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={[styles.subtitle, styles.verticalCenter]}>
+                  {item.channel} &middot; {item.views} &middot; {item.time}
+                </Text>
+              </View>
+              <View style={styles.verticalCenter}>
+                <Ionicons name="ellipsis-vertical" size={20} color="black" />
+              </View>
             </View>
-            <View style={[styles.verticalCenter, { flex: 2 }]}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={[styles.subtitle, styles.verticalCenter]}>
-                {item.channel} &middot; {item.views} &middot; {item.time}
-              </Text>
-            </View>
-            <View style={styles.verticalCenter}>
-              <Ionicons name="ellipsis-vertical" size={20} color="black" />
-            </View>
-          </View>
-        </View>
+          </Pressable>
+        </Link>
       )}
     />
   );
