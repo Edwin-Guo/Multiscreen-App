@@ -1,7 +1,6 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { CategoryChips } from "./CategoryChips";
 export function Header() {
   return (
     <SafeAreaView edges={["top"]}>
@@ -16,7 +15,6 @@ export function Header() {
           <Ionicons name="search" size={25} color="black" />
         </View>
       </View>
-      <CategoryChips />
     </SafeAreaView>
   );
 }

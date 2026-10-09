@@ -46,6 +46,15 @@ export const videos: Video[] = [
     views: "400k",
     time: "4 day ago",
   },
+  {
+    id: 5,
+    title: "Video 5",
+    thumbnail: require("../images/sky-thumb.jpg"),
+    channelIcon: require("../images/profile-picture.png"),
+    channel: "Channel 5",
+    views: "500k",
+    time: "5 day ago",
+  },
   // https://dictionary.cambridge.org/dictionary/english/thumbnail
   // https://www.youtube.com/user/CHANEL
 

@@ -1,8 +1,15 @@
+import { View } from "react-native";
 import { videos } from "../assets/data/videos";
 import { VideoBlock } from "../components/VideoBlock";
+import CategoryChips from "./CategoryChips";
 
 export function HomePage() {
-  return <VideoBlock videos={videos} />;
+  return (
+    <View>
+      <CategoryChips />
+      <VideoBlock videos={videos} />
+    </View>
+  );
 }
 // const styles = StyleSheet.create({
 //   row: {

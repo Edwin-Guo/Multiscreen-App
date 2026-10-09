@@ -1,11 +1,11 @@
 import { Stack } from "expo-router";
+import { View } from "react-native";
 import { Header } from "../components/Header";
 import { Navbar } from "../components/Navbar";
 
 export default function RootLayout() {
   return (
-    <>
-      {/* <Header /> */}
+    <View style={{ flex: 1 }}>
       <Stack
         screenOptions={{
           header: () => <Header />,
@@ -16,9 +16,9 @@ export default function RootLayout() {
       >
         <Stack.Screen name="index" />
         <Stack.Screen name="subscriptions" />
-        <Stack.Screen name="video" options={{ headerShown: false }} />
+        <Stack.Screen name="videoPlayer" options={{ headerShown: false }} />
       </Stack>
       <Navbar />
-    </>
+    </View>
   );
 }

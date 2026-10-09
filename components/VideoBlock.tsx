@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
   thumbnail: {
     height: 300,
-    aspectRatio: 16 / 9,
+    width: "100%",
   },
   channelIcon: {
     margin: 10,
