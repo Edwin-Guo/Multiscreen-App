@@ -1,4 +1,4 @@
-import { SubscriptionsPage } from "../components/SubscriptionsPage";
+import { SubscriptionsPage } from "../../components/SubscriptionsPage";
 
 export function Subscriptions() {
   return <SubscriptionsPage />;
