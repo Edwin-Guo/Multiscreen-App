@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { CategoryChips } from "./CategoryChips";
 export function Header() {
   return (
-    <SafeAreaView>
+    <SafeAreaView edges={["top"]}>
       <View style={[styles.row, styles.backgroundColor, styles.header]}>
         <View style={styles.row}>
           <Ionicons name="logo-youtube" size={30} color="red" />

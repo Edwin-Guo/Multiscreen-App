@@ -1,11 +1,12 @@
 import { navbarItems } from "@/assets/data/navbarItems";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export function Navbar() {
   return (
-    <SafeAreaView>
+    <SafeAreaView edges={["bottom"]}>
       <View style={styles.row}>
         <FlatList
           data={navbarItems}
@@ -13,10 +14,12 @@ export function Navbar() {
           horizontal
           contentContainerStyle={styles.listContainer}
           renderItem={({ item }) => (
-            <View style={styles.navbarItem}>
-              <Ionicons name={item.icon} size={24} color="black" />
-              <Text style={styles.navbarText}>{item.label}</Text>
-            </View>
+            <Link href={item.href} asChild>
+              <Pressable style={styles.navbarItem}>
+                <Ionicons name={item.icon} size={24} color="black" />
+                <Text style={styles.navbarText}>{item.label}</Text>
+              </Pressable>
+            </Link>
           )}
         />
       </View>
