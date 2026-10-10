@@ -27,10 +27,20 @@ export default function RootLayout() {
           }}
         />
         <Tabs.Screen
+          name="shorts"
+          options={{
+            title: "Shorts",
+            headerShown: false,
+            tabBarIcon: ({ focused, size }) => (
+              <Ionicons name={focused ? "film" : "film-outline"} size={size} />
+            ),
+          }}
+        />
+
+        <Tabs.Screen
           name="subscriptions"
           options={{
             title: "Subscriptions",
-
             tabBarIcon: ({ focused, size }) => (
               <Ionicons
                 name={focused ? "albums" : "albums-outline"}

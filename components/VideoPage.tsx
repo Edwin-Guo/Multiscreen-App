@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   commentBlock: {
     backgroundColor: "#f1f1f1",
     borderRadius: 10,
-    padding: 20,
+    padding: 15,
     marginBottom: 10,
   },
 });
