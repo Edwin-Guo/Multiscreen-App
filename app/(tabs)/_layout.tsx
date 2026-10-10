@@ -36,7 +36,19 @@ export default function RootLayout() {
             ),
           }}
         />
-
+        <Tabs.Screen
+          name="upload"
+          options={{
+            title: "",
+            headerShown: false,
+            tabBarIcon: ({ focused, size }) => (
+              <Ionicons
+                name={focused ? "add-circle" : "add-circle-outline"}
+                size={size}
+              />
+            ),
+          }}
+        />
         <Tabs.Screen
           name="subscriptions"
           options={{
@@ -44,6 +56,18 @@ export default function RootLayout() {
             tabBarIcon: ({ focused, size }) => (
               <Ionicons
                 name={focused ? "albums" : "albums-outline"}
+                size={size}
+              />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="profile"
+          options={{
+            title: "You",
+            tabBarIcon: ({ focused, size }) => (
+              <Ionicons
+                name={focused ? "person-circle" : "person-circle-outline"}
                 size={size}
               />
             ),
